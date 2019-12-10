@@ -30,7 +30,7 @@ public final class ImageViewerController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = configuration?.imageView?.image ?? configuration?.image
-        
+        downloadButton.setImage(configuration.downloadIcon, for: .normal)
         setupScrollView()
         setupGestureRecognizers()
         setupTransitions()
