@@ -30,7 +30,8 @@ public final class ImageViewerController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = configuration?.imageView?.image ?? configuration?.image
-        downloadButton.setImage(configuration?.downloadIcon, for: .normal)
+        downloadButton.setImage(configuration?.downloadIcon?.withRenderingMode(.alwaysTemplate), for: .normal)
+        downloadButton.tintColor = UIColor.white
         setupScrollView()
         setupGestureRecognizers()
         setupTransitions()
