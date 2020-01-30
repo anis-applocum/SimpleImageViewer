@@ -2,13 +2,14 @@ import UIKit
 import AVFoundation
 
 public final class ImageViewerController: UIViewController {
-    @IBOutlet fileprivate var scrollView: UIScrollView!
-    @IBOutlet fileprivate var imageView: UIImageView!
-    @IBOutlet fileprivate var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet fileprivate weak var scrollView: UIScrollView!
+    @IBOutlet fileprivate weak var imageView: UIImageView!
+    @IBOutlet fileprivate weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet fileprivate weak var downloadButton: UIButton!
     
     fileprivate var transitionHandler: ImageViewerTransitioningHandler?
     fileprivate let configuration: ImageViewerConfiguration?
-    
+    public var downloadButtonAction: (() -> Void)?
     public override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -29,7 +30,8 @@ public final class ImageViewerController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = configuration?.imageView?.image ?? configuration?.image
-        
+        downloadButton.setImage(configuration?.downloadIcon?.withRenderingMode(.alwaysTemplate), for: .normal)
+        downloadButton.tintColor = UIColor.white
         setupScrollView()
         setupGestureRecognizers()
         setupTransitions()
@@ -97,7 +99,9 @@ private extension ImageViewerController {
     @IBAction func closeButtonPressed() {
         dismiss(animated: true)
     }
-    
+    @IBAction func downloadButtonPressed() {
+        self.downloadButtonAction?()
+    }
     @objc func imageViewDoubleTapped(recognizer: UITapGestureRecognizer) {
         func zoomRectForScale(scale: CGFloat, center: CGPoint) -> CGRect {
             var zoomRect = CGRect.zero

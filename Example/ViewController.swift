@@ -43,9 +43,14 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         let configuration = ImageViewerConfiguration { config in
             config.imageView = cell.imageView
+            config.downloadIcon = cell.imageView.image
         }
-        
-        present(ImageViewerController(configuration: configuration), animated: true)
+        let imaevc = ImageViewerController(configuration: configuration)
+        imaevc.downloadButtonAction = { [weak self]  in
+            print(indexPath.row)
+            
+        }
+        present(imaevc, animated: true)
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
