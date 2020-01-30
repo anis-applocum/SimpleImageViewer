@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A02EE5CF1EF172C8000EAB41 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EE5CD1EF172C3000EAB41 /* Utilities.swift */; };
-		A02EE5D71EF1897D000EAB41 /* UtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EE5D61EF1897D000EAB41 /* UtilitiesTests.swift */; };
-		A02EE5D91EF1897D000EAB41 /* SimpleImageViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BF70A71EDC5B1400109F6E /* SimpleImageViewer.framework */; };
-		A02EE5DF1EF189B4000EAB41 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EE5CD1EF172C3000EAB41 /* Utilities.swift */; };
 		A05E9FA51EF7FB640024CF47 /* ImageViewerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05E9FA41EF7FB640024CF47 /* ImageViewerConfiguration.swift */; };
 		A07E76D71ECC94A400B77D46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E76D61ECC94A400B77D46 /* AppDelegate.swift */; };
 		A07E76D91ECC94A400B77D46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E76D81ECC94A400B77D46 /* ViewController.swift */; };
@@ -59,7 +56,6 @@
 		A02EE5B81EF16E54000EAB41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A02EE5CB1EF16EBE000EAB41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A02EE5CD1EF172C3000EAB41 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		A02EE5D41EF1897D000EAB41 /* SimpleImageViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleImageViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02EE5D61EF1897D000EAB41 /* UtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTests.swift; sourceTree = "<group>"; };
 		A02EE5D81EF1897D000EAB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A03DAD4E1EFCFF030060DF69 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
@@ -84,14 +80,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A02EE5D11EF1897D000EAB41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A02EE5D91EF1897D000EAB41 /* SimpleImageViewer.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A07E76D01ECC94A400B77D46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,7 +140,6 @@
 			children = (
 				A07E76D31ECC94A400B77D46 /* Example.app */,
 				A0BF70A71EDC5B1400109F6E /* SimpleImageViewer.framework */,
-				A02EE5D41EF1897D000EAB41 /* SimpleImageViewerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,23 +207,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A02EE5D31EF1897D000EAB41 /* SimpleImageViewerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A02EE5DC1EF1897D000EAB41 /* Build configuration list for PBXNativeTarget "SimpleImageViewerTests" */;
-			buildPhases = (
-				A02EE5D01EF1897D000EAB41 /* Sources */,
-				A02EE5D11EF1897D000EAB41 /* Frameworks */,
-				A02EE5D21EF1897D000EAB41 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SimpleImageViewerTests;
-			productName = SimpleImageViewerTests;
-			productReference = A02EE5D41EF1897D000EAB41 /* SimpleImageViewerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		A07E76D21ECC94A400B77D46 /* Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A07E76E51ECC94A400B77D46 /* Build configuration list for PBXNativeTarget "Example" */;
@@ -284,11 +254,6 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = aFrogleap;
 				TargetAttributes = {
-					A02EE5D31EF1897D000EAB41 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = WQEYNHG5C2;
-						ProvisioningStyle = Automatic;
-					};
 					A07E76D21ECC94A400B77D46 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = WNRNLYYK3W;
@@ -317,19 +282,11 @@
 			targets = (
 				A07E76D21ECC94A400B77D46 /* Example */,
 				A0BF70A61EDC5B1400109F6E /* SimpleImageViewer */,
-				A02EE5D31EF1897D000EAB41 /* SimpleImageViewerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A02EE5D21EF1897D000EAB41 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A07E76D11ECC94A400B77D46 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,15 +308,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A02EE5D01EF1897D000EAB41 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A02EE5DF1EF189B4000EAB41 /* Utilities.swift in Sources */,
-				A02EE5D71EF1897D000EAB41 /* UtilitiesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A07E76CF1ECC94A400B77D46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,30 +357,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A02EE5DD1EF1897D000EAB41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = WQEYNHG5C2;
-				INFOPLIST_FILE = SimpleImageViewerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.afrogleap.SimpleImageViewerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		A02EE5DE1EF1897D000EAB41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = WQEYNHG5C2;
-				INFOPLIST_FILE = SimpleImageViewerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.afrogleap.SimpleImageViewerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
 		A07E76E31ECC94A400B77D46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -635,15 +559,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A02EE5DC1EF1897D000EAB41 /* Build configuration list for PBXNativeTarget "SimpleImageViewerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A02EE5DD1EF1897D000EAB41 /* Debug */,
-				A02EE5DE1EF1897D000EAB41 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A07E76CE1ECC94A400B77D46 /* Build configuration list for PBXProject "SimpleImageViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

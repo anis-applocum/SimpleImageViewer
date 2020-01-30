@@ -1,6 +1,7 @@
 import UIKit
 
 final class AnimatableImageView: UIView {
+    // MARK: - Vars
     fileprivate let imageView = UIImageView()
     
     override var contentMode: UIView.ContentMode {
@@ -74,6 +75,7 @@ private extension AnimatableImageView {
         case .bottomRight:
             imageView.bounds = Utilities.rect(forSize: image.size)
             imageView.center = Utilities.bottomRight(forSize: image.size, insideSize: bounds.size)
+        default: break
         }
     }
 }
